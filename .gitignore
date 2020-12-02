@@ -15,3 +15,8 @@ mtCNNModels/*
 !mtCNNModels/README.md
 facenetModels/*
 !facenetModels/README.md
+
+# clpham:
+**/*.pb
+**/*.swp
+**/*~

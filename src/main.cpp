@@ -35,14 +35,14 @@ int main()
     int videoFrameHeight = 480;
     int maxFacesPerScene = 5;
     float knownPersonThreshold = 1.;
-    bool isCSICam = true;
+    bool isCSICam = false; //clpham:
 
     // init facenet
     FaceNetClassifier faceNet = FaceNetClassifier(gLogger, dtype, uffFile, engineFile, batchSize, serializeEngine,
             knownPersonThreshold, maxFacesPerScene, videoFrameWidth, videoFrameHeight);
 
     // init opencv stuff
-    VideoStreamer videoStreamer = VideoStreamer(0, videoFrameWidth, videoFrameHeight, 60, isCSICam);
+    VideoStreamer videoStreamer = VideoStreamer(0, videoFrameWidth, videoFrameHeight, 30, isCSICam); //clpham:
     cv::Mat frame;
 
     // init mtCNN
